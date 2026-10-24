@@ -67,12 +67,16 @@ class Level {
     Magpie.drawMagpie({ rotation: 0.2, beam: false });
     pop();
   }
+
+  }
+
     // junk
     for (const junk of this.junk) {
       junk.draw();
     }
     pop();
   }
+
 
   /**
    * Moves anything owned by the level (junk, comets, etc). If the `countTime`
