@@ -49,6 +49,8 @@ class Magpie {
 
   /** Sets the captured junk to the given one, and turns off the beam. */
   captureJunk(junk) {
+    this.capturedJunk = junk;
+    this.beam = false;
     // TODO (Phase 4): Remember the junk in this.capturedJunk, and switch the
     // beam off.
   }
