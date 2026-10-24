@@ -30,7 +30,7 @@ class Level {
   timeLeft() {
     // TODO (Phase 5): Return the initial time minus the elapsed time, but
     // never less than zero.
-    return Math.max(0, this.timeInitial - this.timeElapsed)
+    return Math.max(0, this.time.initial - this.time.elapsed);
     return 0;
   }
 
