@@ -173,6 +173,7 @@ class Game {
    }
   }
 
+  
   isLevelComplete() {
     // level is complete when there is no more junk to salvage and the magpie
     // isn't hauling anything.
