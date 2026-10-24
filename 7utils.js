@@ -42,4 +42,5 @@ function timeToStringParts(timeMs) {
   // TODO (Phase 5): Round up to whole seconds, then split them into minutes
   // and leftover seconds. Seconds always have two digits.
   return { minutes: "0", seconds: "00" };
+  }
 }
