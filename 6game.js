@@ -130,6 +130,8 @@ class Game {
    * is delivered.
    **/
   resolveDropoff(delta) {
+    const junk = this.magpie.capturedJunk;
+    if (junk == null) {
     // TODO (Phase 4): If the Magpie isn't carrying junk, return false. If
     // the carried junk is within Mothership.PICKUP_DIAMETER / 2 of the
     // Mothership, add delta to its dropoffTime. Otherwise, drain its
@@ -166,6 +168,9 @@ class Game {
   updateScore(reason) {
     // TODO (Phase 4): When the reason is "dropoff", add Game.SCORE_DROPOFF
     // to the score.
+    if (reason === "dropoff") {
+    this.score += Game.SCORE_DROPOFF;
+   }
   }
 
   isLevelComplete() {
