@@ -139,6 +139,22 @@ class Game {
     // is more than Game.JUNK_DROPOFF_TIME_MS.
     return false;
   }
+  const pickupRadius = Mothership.PICKUP_DIAMETER / 2;
+   if (
+    dist(
+      this.mothership.physics.x,
+      this.mothership.physics.y,
+      junk.physics.x,
+      junk.physics.y,
+    ) <= pickupRadius
+   ){
+    junk.dropoffTime += delta;
+  } else {
+    junk.dropoffTime = Math.max(0, junk.dropoffTime - delta);
+  }
+  return junk.dropoffTime > Game.JUNK_DROPOFF_TIME_MS;
+}
+
 
   draw() {
     this.level.draw(this.score, this.lives);
