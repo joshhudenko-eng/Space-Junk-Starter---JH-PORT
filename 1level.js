@@ -68,7 +68,6 @@ class Level {
     pop();
   }
 
-  }
 
     // junk
     for (const junk of this.junk) {
